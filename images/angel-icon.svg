@@ -1,0 +1,92 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="haloGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#fce4ec" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f8bbd0" stop-opacity="0.2"/>
+    </radialGradient>
+    <linearGradient id="wingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#fce4ec" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f8bbd0" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Angel Icon -->
+  <g transform="translate(100, 100)">
+    <!-- Background glow -->
+    <circle cx="0" cy="0" r="80" fill="url(#haloGradient)" opacity="0.4" filter="url(#glow)"/>
+    
+    <!-- Halo -->
+    <ellipse cx="0" cy="-35" rx="25" ry="5" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+    
+    <!-- Head -->
+    <circle cx="0" cy="-20" r="15" fill="#fef8ff" stroke="#f8bbd0" stroke-width="1"/>
+    
+    <!-- Hair -->
+    <path d="M-15,-30 C-17,-35 -12,-37 -8,-35 C-4,-36 4,-36 8,-35 C12,-37 17,-35 15,-30" 
+          fill="#fce4ec" stroke="#f8bbd0" stroke-width="0.5"/>
+    
+    <!-- Wings - more detailed and angel-like -->
+    <!-- Left wing -->
+    <path d="M-20,-10
+             C-50,-20 -65,-10 -70,10
+             C-72,20 -70,30 -65,40
+             C-60,50 -50,55 -40,58
+             C-35,55 -30,50 -25,40
+             C-22,30 -20,20 -20,10
+             L-20,-10
+             Z" 
+          fill="url(#wingGradient)" 
+          stroke="#f8bbd0" 
+          stroke-width="1"/>
+    <!-- Wing feather lines -->
+    <path d="M-25,-5 C-45,-15 -60,-10 -65,5 M-30,0 C-50,-10 -60,-5 -65,10 M-35,5 C-55,-5 -60,0 -65,15"
+          fill="none" stroke="#f8bbd0" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Right wing -->
+    <path d="M20,-10
+             C50,-20 65,-10 70,10
+             C72,20 70,30 65,40
+             C60,50 50,55 40,58
+             C35,55 30,50 25,40
+             C22,30 20,20 20,10
+             L20,-10
+             Z" 
+          fill="url(#wingGradient)" 
+          stroke="#f8bbd0" 
+          stroke-width="1"/>
+    <!-- Wing feather lines -->
+    <path d="M25,-5 C45,-15 60,-10 65,5 M30,0 C50,-10 60,-5 65,10 M35,5 C55,-5 60,0 65,15"
+          fill="none" stroke="#f8bbd0" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Body/Robe -->
+    <path d="M-10,-8
+             L-12,25
+             C-12,35 -10,45 -8,50
+             C-5,55 5,55 8,50
+             C10,45 12,35 12,25
+             L10,-8
+             Z" 
+          fill="#fce4ec" 
+          stroke="#e91e63" 
+          stroke-width="1"/>
+    
+    <!-- Face details -->
+    <circle cx="-4" cy="-20" r="1" fill="#e91e63"/> <!-- Left eye -->
+    <circle cx="4" cy="-20" r="1" fill="#e91e63"/> <!-- Right eye -->
+    <path d="M-2,-16 C0,-15 2,-16" fill="none" stroke="#e91e63" stroke-width="0.5"/> <!-- Smile -->
+    
+    <!-- Sparkles -->
+    <g fill="#f8bbd0" opacity="0.7">
+      <path d="M-40,-50 L-38,-45 L-35,-43 L-38,-41 L-40,-36 L-42,-41 L-45,-43 L-42,-45 Z"/>
+      <path d="M40,-50 L42,-45 L45,-43 L42,-41 L40,-36 L38,-41 L35,-43 L38,-45 Z"/>
+      <path d="M-50,30 L-48,35 L-45,37 L-48,39 L-50,44 L-52,39 L-55,37 L-52,35 Z"/>
+      <path d="M50,30 L52,35 L55,37 L52,39 L50,44 L48,39 L45,37 L48,35 Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e0d5f5" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#d1c2f0" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f0e6ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f9f6ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#f9f6ff"/>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.4"/>
+  
+  <!-- Subtle light spots -->
+  <circle cx="300" cy="200" r="150" fill="url(#glow)" opacity="0.6"/>
+  <circle cx="900" cy="600" r="200" fill="url(#glow)" opacity="0.5"/>
+  <circle cx="600" cy="400" r="250" fill="url(#glow)" opacity="0.4"/>
+  
+  <!-- Subtle stars -->
+  <g fill="#8e6dbd" opacity="0.2">
+    <path d="M100,100 L105,115 L120,120 L105,125 L100,140 L95,125 L80,120 L95,115 Z" />
+    <path d="M700,200 L705,215 L720,220 L705,225 L700,240 L695,225 L680,220 L695,215 Z" />
+    <path d="M300,500 L305,515 L320,520 L305,525 L300,540 L295,525 L280,520 L295,515 Z" />
+    <path d="M900,400 L905,415 L920,420 L905,425 L900,440 L895,425 L880,420 L895,415 Z" />
+    <path d="M500,700 L505,715 L520,720 L505,725 L500,740 L495,725 L480,720 L495,715 Z" />
+    <path d="M1100,600 L1105,615 L1120,620 L1105,625 L1100,640 L1095,625 L1080,620 L1095,615 Z" />
+  </g>
+</svg>
